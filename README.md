@@ -8,29 +8,29 @@ Each meditation is stored as JSON object with the following structure:
 ```
 {
 	"startTime": integer,						//	Time when the meditation started in milliseconds since Unix epoch
-	"endTime": integer,							//	Time when the meditation ended in milliseconds since Unix epoch
+	"endTime": integer,						//	Time when the meditation ended in milliseconds since Unix epoch
 	"duration": integer,						//	Duration of the meditation in milliseconds
 	"senseStats": {
-		"mind": integer,						//	Number of times the user selected the Mind sense
-		"feel": integer,						//	Number of times the user selected the Feel sense
-		"see": integer,							//	Number of times the user selected the See sense
-		"hear": integer,						//	Number of times the user selected the Hear sense
-		"think": integer,						//	Number of times the user selected the Think sense
+		"mind": integer,					//	Number of times the user selected the Mind sense
+		"feel": integer,					//	Number of times the user selected the Feel sense
+		"see": integer,						//	Number of times the user selected the See sense
+		"hear": integer,					//	Number of times the user selected the Hear sense
+		"think": integer,					//	Number of times the user selected the Think sense
 		"mentalImage": integer,					//	Number of times the user selected the Mental Image sense
-		"emotion": integer						//	Number of times the user selected the Emotion sense
+		"emotion": integer					//	Number of times the user selected the Emotion sense
 	},
-	"senses": base64,							//	Base64 encoded byte array with all the senses selected during the meditation session
+	"senses": base64,						//	Base64 encoded byte array with all the senses selected during the meditation session
 	"moodAtTheEnd": integer,					//	User's mood at the end of the meditation session
-												//	-1 = Worse, 0 = Same, 1 = Better
+									//	-1 = Worse, 0 = Same, 1 = Better
 
 	"meditationType": integer,					//	Type of meditation
-												//	1 = Noting, 2 = Feel Breath, 3 = Focus Mixed, 4 = Speed Noting 
+									//	1 = Noting, 2 = Feel Breath, 3 = Focus Mixed, 4 = Speed Noting 
 
-	"meditationLabelType": integer				//	Label of meditation
-												//	1 = Essential, 2 = Shinzen, 3 = ThreeOuter, 4 = OnlyFeel, 5 = InhaleExhale
+	"meditationLabelType": integer					//	Label of meditation
+									//	1 = Essential, 2 = Shinzen, 3 = ThreeOuter, 4 = OnlyFeel, 5 = InhaleExhale
 												
 	"inputMode": integer						//	Input type of meditation
-												//	1 = Tap, 2 = Swipe, 3 = TimerOnly, 4 = Voice
+									//	1 = Tap, 2 = Swipe, 3 = TimerOnly, 4 = Voice
 }
 ```
 
