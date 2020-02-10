@@ -36,11 +36,13 @@ Each meditation is stored as JSON object with the following structure:
 
 Note: **endTime** is **NOT** guaranteed to be **startTime** + **duration** because the meditation can be paused.
 
-# Senses Format
+# Senses Format(V. 2)
 Senses are stored as a base64 encoded byte array with the following structure:
 
 ```
-The first 8 bytes of the array store an unsigned integer representing the number of senses.
+* 32 byte reserved space, should be ignored
+* 8 byte unsigned integer -> format version
+* 8 byte unsigned integer -> number of senses
 For each sense:
 	* 8 byte unsigned integer -> sense type
 	* 8 byte unsigned integer -> timestamp in milliseconds since Unix epoch
@@ -50,7 +52,7 @@ For each sense:
 	For each modifier:
 		* 8 byte unsigned integer -> modifier type
 		* 8 byte unsigned integer -> timestamp in milliseconds since Unix epoch
-		* 8 byte unsigned integer -> timestamp in milliseconds since meditation start time
+		* 8 byte unsigned integer -> timestamp in milliseconds since beginging of meditation
 ```
 
 **Senses**
