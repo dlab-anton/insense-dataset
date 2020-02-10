@@ -21,7 +21,7 @@ Each meditation is stored as JSON object with the following structure:
 	},
 	"senses": base64,						//	Base64 encoded byte array with all the senses selected during the meditation session
 	"moodAtTheEnd": integer,					//	User's mood at the end of the meditation session
-									//	-1 = Worse, 0 = Same, 1 = Better
+									//	-1 = Worse, 0 = Same, 1 = Better, null = Unknown
 
 	"meditationType": integer,					//	Type of meditation
 									//	1 = Noting, 2 = Feel Breath, 3 = Focus Mixed, 4 = Speed Noting 
@@ -56,29 +56,29 @@ For each sense:
 **Senses**
 
 ```
-0: Mind
-1: Feel
-2: See
-3: Hear
-4: Think
-5: MentalImage
-6: Emotion
-7: OtherThanFeel
-8: Inhale
-9: Exhale
+0 = Mind
+1 = Feel
+2 = See
+3 = Hear
+4 = Think
+5 = MentalImage
+6 = Emotion
+7 = OtherThanFeel
+8 = Inhale
+9 = Exhale
 ```
 
 **Modifiers**
 
 ```
-0: None
-1: Past
-2: Future
-3: Good
-4: Bad
-5: NoTime
-6: Neutral
-7: Gone
+0 = None
+1 = Past
+2 = Future
+3 = Good
+4 = Bad
+5 = NoTime
+6 = Neutral
+7 = Gone
 ```
 
 # License
